@@ -1,11 +1,11 @@
-## Writeup Template
 
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
 
 ---
 
 **Advanced Lane Finding Project**
 
+
+The repositry of the porject 
 ### README
 
 The goals / steps of this project are the following:
@@ -28,8 +28,8 @@ The goals / steps of this project are the following:
 [image4]: result/partly_lanes.png "Lanes"
 [image5]: result/fit_polinomial.png "Fit polinomail"
 [image51]: result/fit_polinomial_2.png "Fit polinomail"
-[image6]: .result/lane_detected.png "Lanes unwarp "
-[video1]: out.mp4 "Video"
+[image6]: result/lane_detected.png "Lanes unwarp "
+[video1]: out.mp4 "Result Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -130,7 +130,7 @@ vehicle_offset = undist.shape[1]/2 - (bottom_x_left + bottom_x_right)/2
  
  
 
-#### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
+#### 6. Example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
 
 
@@ -144,15 +144,14 @@ vehicle_offset = undist.shape[1]/2 - (bottom_x_left + bottom_x_right)/2
 all the methods are applyed to video and fallowing result is optained. 
 
 
-Here's a [link to my video result](./out.mp4)
+Here's a [link to my result](./out.mp4)
 
-![alt text][video1]
 
 ---
 
 ### Discussion
 
-The model is prune to daylight, shadow, reslections etc. That's why cannot be used in real world applications. It is also can easyly be fooled. For further improvement the overtime method can be updated which is only takes `n` avarage of the detected lines. 
+The model is resistant to changes in daylight, shadow, reslections etc. That's why it cannot be used in real world applications. It is also can easyly be fooled by another thing in thw way. There need to a check procedure instead of changing lanelines border easyly. For further improvement the overtime method can be updated which is only takes `n` avarage of the detected lines. 
 
 
 
